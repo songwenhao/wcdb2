@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>TableCodableClass</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>class &lt;#Class name#&gt;: WCDB.TableCodable {
+    //Your own properties
+        var variable1: Int = 0
+    var variable2: String? // Optional if it would be nil in some WCDB selection.
+    var variable3: Double? // Optional if it would be nil in some WCDB selection.
+    let invalid: Int = 0 // An initialized constant property is not allowed.
+    let unbound: Date? = nil
+        
+    enum CodingKeys: String, CodingTableKey {
+        typealias Root = Temp;
+        
+        //List the properties which should be bound to table.
+        case variable1 = "custom_name"
+        case variable2
+        case variable3
+        
+        static let objectRelationalMapping = TableBinding(CodingKeys.self) {
+            //Column constraints for primary key, unique, not null, default value and so on. It is optional.
+            //BindColumnConstraint(.variable1, isPrimary: true, isAutoIncrement: true)
+            //BindColumnConstraint(.variable2, isUnique: true)
+            
+            //Index bindings. It is optional.
+            //BindIndex(.variable2, namedWith: "_index")
+            
+            //Table constraints for multi-primary, multi-unique and so on. It is optional.
+            //BindMultiPrimary(.variable2, .variable3)
+            
+            //Virtual table binding for FTS and so on. It is optional.
+            //BindVirtualTable(withModule: .FTS5, and: BuiltinTokenizer.Verbatim)
+        }
+    }
+    
+    //Properties below are needed when the primary key is auto-increment.
+    //var isAutoIncrement: Bool = false
+    //var lastInsertedRowID: Int64 = 0
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>4A806509-68C8-4F42-9E3F-0AB87DCA7ED7</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>TableCodable Snippet</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

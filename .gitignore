@@ -1,0 +1,48 @@
+# Visual Studio Code
+.vscode
+
+# Visual Studio
+.vs
+
+# Android Studio, Gradle
+*.iml
+.gradle
+.idea
+.settings
+.project
+.classpath
+.DS_Store
+.externalNativeBuild
+
+# Xcode
+*.pbxuser
+xcuserdata
+xcuserdata/*
+*.xcworkspace/*
+*.xcworkspace
+DerivedData
+
+#CMake
+src/build/
+
+# WCDB
+WCDB.framework
+
+# SwiftPM
+/.build
+Package.resolved
+
+# WeChat
+WeChat/conan/*
+
+# wconan
+WeChat/.wconan2/
+WeChat/wconan_build/
+WeChat/wconan_libs/
+WeChat/wconan_local_build/
+WeChat/wconan_package.lock
+WeChat/wconan_publish.py
+WeChat/cmake-build-*/
+WeChat/compile.log
+WeChat/apple_build/
+WeChat/export_headers/

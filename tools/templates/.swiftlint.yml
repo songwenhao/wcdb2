@@ -1,0 +1,14 @@
+disabled_rules:
+  - fallthrough
+  - cyclomatic_complexity
+  - file_length
+  - function_parameter_count
+  - todo
+  - function_body_length
+  - type_body_length
+  - nesting
+  - generic_type_name
+  - identifier_name
+  - type_name
+  - line_length
+  - force_cast

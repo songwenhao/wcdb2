@@ -1,0 +1,9 @@
+rootProject.name = 'wcdb-android'
+include ':wcdb', ':room'
+
+file('samples').eachDir { dir ->
+    if (new File(dir, 'build.gradle').exists()) {
+        include dir.name
+        project(":${dir.name}").projectDir = dir
+    }
+}
